@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -89,6 +89,7 @@ namespace RUAP_LV4
         public void TheAddToChartRequiringFillingAFormTest()
         {
             driver.Navigate().GoToUrl("https://demo.opencart.com/");
+            driver.FindElement(By.LinkText("Components")).Click();
             driver.FindElement(By.LinkText("Monitors (2)")).Click();
             driver.FindElement(By.XPath("//div[@id='content']/div[3]/div/div/div[2]/div[2]/button/span")).Click();
             driver.FindElement(By.XPath("//div[@id='product']/div")).Click();
